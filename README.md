@@ -1,6 +1,6 @@
-# ipu6-camera-adl
+# ipu6-camera
 
-Enable the integrated Intel IPU6 MIPI camera on **Alder Lake** (12th Gen) and **Raptor Lake** (13th Gen) laptops running Ubuntu 24.04 LTS.
+Enable the integrated Intel IPU6 MIPI camera on **Alder Lake** (12th Gen)
 
 ## The Problem
 
@@ -32,20 +32,20 @@ OV2740 sensor  ←  IVSC (powers the sensor on/off)
 
 | Platform | PCI IDs | HAL | Status |
 |----------|---------|-----|--------|
-| Alder Lake (12th Gen) | `8086:462e`, `8086:465d` | `ipu6ep` | ✅ Tested |
+| Alder Lake (12th Gen) | `8086:465d` | `ipu6ep` | ✅ Tested |
 | Raptor Lake (13th Gen) | `8086:a75d` | `ipu6ep` | ✅ Should work |
 | Tiger Lake (11th Gen) | `8086:9a19` | `ipu6` | ⚠️ Experimental |
-| Meteor Lake (14th Gen) | `8086:7d19` | `ipu6epmtl` | → Use [ipu6-camera](https://github.com/achrafsoltani/ipu6-camera) |
+| Meteor Lake (12th Gen) | `8086:7d19` | `ipu6epmtl` | → Use [ipu6-camera](https://github.com/achrafsoltani/ipu6-camera) |
 
 ### Tested On
 
-- **Lenovo ThinkPad X1 Carbon Gen 10** — Alder Lake, OV2740 (`INT3474`), kernel `6.17.0-1012-oem`, Ubuntu 24.04.4 LTS
+- **Lenovo ThinkPad X1 Carbon Gen 12** — Alder Lake, OV2740 (`INT3474`), kernel `6.17.0-1012-oem`, Ubuntu 24.04.4 LTS
 
 ## Quick Start
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ipu6-camera-adl.git
-cd ipu6-camera-adl
+git clone https://github.com/Jem256/ipu6-camera.git
+cd ipu6-camera
 
 # Optional: check hardware first
 sudo ./setup.sh --check
@@ -134,7 +134,7 @@ Non-obvious lessons from building this:
 ## Credits
 
 - Intel — open-source Camera HAL and GStreamer plugin
-- Ubuntu OEM Solutions team — v4l2-relayd architecture
+- [Achraf Soltani](https://www.achrafsoltani.com/computer-science/ipu6-camera-linux-meteor-lake/) - Intel IPU6 Camera on Linux: Automated Setup for Meteor Lake Laptops
 - [Javier Tia](https://jetm.github.io/blog/posts/ipu6-webcam-libcamera-on-linux/) — mainline migration documentation
 - Launchpad bugs [#2125294](https://bugs.launchpad.net/bugs/2125294), [#2107304](https://bugs.launchpad.net/bugs/2107304), [#2114878](https://bugs.launchpad.net/bugs/2114878)
 
