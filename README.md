@@ -32,7 +32,7 @@ OV2740 sensor  ←  IVSC (powers the sensor on/off)
 
 | Platform | PCI IDs | HAL | Status |
 |----------|---------|-----|--------|
-| Alder Lake (12th Gen) | `8086:465d` | `ipu6ep` | ✅ Tested |
+| Alder Lake (12th Gen) | `8086:462e`, `8086:465d` | `ipu6ep` | ✅ Tested |
 | Raptor Lake (13th Gen) | `8086:a75d` | `ipu6ep` | ✅ Should work |
 | Tiger Lake (11th Gen) | `8086:9a19` | `ipu6` | ⚠️ Experimental |
 | Meteor Lake (12th Gen) | `8086:7d19` | `ipu6epmtl` | → Use [ipu6-camera](https://github.com/achrafsoltani/ipu6-camera) |
@@ -137,6 +137,9 @@ Non-obvious lessons from building this:
 - [Achraf Soltani](https://www.achrafsoltani.com/computer-science/ipu6-camera-linux-meteor-lake/) - Intel IPU6 Camera on Linux: Automated Setup for Meteor Lake Laptops
 - [Javier Tia](https://jetm.github.io/blog/posts/ipu6-webcam-libcamera-on-linux/) — mainline migration documentation
 - Launchpad bugs [#2125294](https://bugs.launchpad.net/bugs/2125294), [#2107304](https://bugs.launchpad.net/bugs/2107304), [#2114878](https://bugs.launchpad.net/bugs/2114878)
+
+## Contributing
+If you've tested this on additional hardware, please open an issue or PR with your laptop model, sensor, and kernel version.
 
 ## License
 
